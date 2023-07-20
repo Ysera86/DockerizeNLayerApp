@@ -1,0 +1,6 @@
+N katmanlý API projemizi  dockerize yapýcaz.
+
+
+1 - illa lokalde baðlanacaksak, sql içn container kaldýrýp o port,username,pwd vs appsettingste(aslýnda env.de) verip ile yeni containera verebiliriz. 2container ile.
+2 - Aslýnda dockerize edeceksek, appsettings içindeki local db kullanmamalý, localden çalýþan birþey olmamalý. Çünkü Docker aslýnda canlý bir ortam,  Uzak sunucu db olmalý.
+uzak db için : free cloud distributed sql db : yugabyteDB seçtim
