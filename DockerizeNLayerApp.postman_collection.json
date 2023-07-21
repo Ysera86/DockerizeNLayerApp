@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "de0ad3e6-db43-4b87-9d17-799892fcf40d",
+		"name": "DockerizeNLayerApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14500009"
+	},
+	"item": [
+		{
+			"name": "Local CategoriesWithDto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7150/api/CategoriesWithDto",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7150",
+					"path": [
+						"api",
+						"CategoriesWithDto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docker CategoriesWithDto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/CategoriesWithDto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"CategoriesWithDto"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

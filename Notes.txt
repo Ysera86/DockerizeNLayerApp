@@ -4,3 +4,37 @@ N katmanlý API projemizi  dockerize yapýcaz.
 1 - illa lokalde baðlanacaksak, sql içn container kaldýrýp o port,username,pwd vs appsettingste(aslýnda env.de) verip ile yeni containera verebiliriz. 2container ile.
 2 - Aslýnda dockerize edeceksek, appsettings içindeki local db kullanmamalý, localden çalýþan birþey olmamalý. Çünkü Docker aslýnda canlý bir ortam,  Uzak sunucu db olmalý.
 uzak db için : free cloud distributed sql db : yugabyteDB seçtim
+
+
+-->
+
+docker build --no-cache -t dockerizenlayerimage .
+docker images -> 6ec..
+docker run -d -p 5000:5000 --name dockerizenlayerappcontainer1 6ec -> fa4
+docker run -d -p 5001:5000 --name dockerizenlayerappcontainer2 6ec -> 268
+
+
+-> db localhost olduðu için þuan tarayýcý ve postmande alýnan yanýt þaðýdaki gibi. db kaldýrmayý da halledince bu konu çözümlenecek.
+{"Data":null,"Errors":["LocalDB is not supported on this platform."]}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ekstra not:
+
+docker network create nlayerapiandsql
+docker network ls
+
+-it : interactive contrary -d
+docker run -it
+
+docker run ............... --network=nlayerapiandsql
